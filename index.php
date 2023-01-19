@@ -46,7 +46,7 @@ $rows = $result->fetch_assoc();
       </div>
       <div class="showcase-text typewriter">
         <div class="typed-out">Message someone anonymously</div>
-        <p>Spread the love not have</p>
+        <p>Yamete Kudasai</p>
         <a href="add_message.php" class="btn btn-outline-danger">Message Now</a>
       </div>
     </div>
