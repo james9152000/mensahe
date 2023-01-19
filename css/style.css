@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+.main-nav .web-title{
+    color: #fff;
+    
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 2vmax;
+    margin: 0;
+    margin-left: 10px;
+
+}
+.main-nav .home{
+    margin-right: 10px;
+}
+.main-nav .home a{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+/* SHOWCASE */
+
+.showcase{
+    background-image: linear-gradient(to right bottom, #b83abe, #a959d0, #9971dd, #8d84e5, #8595e8, #8595e8, #8595e8, #8595e8, #8d84e5, #9971dd, #a959d0, #b83abe);
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.showcase .rocket{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 100px;
+    animation-name: rocket;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+.showcase .rocket img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes rocket{
+    0%{
+        top: 100px;
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        left: 700px;
+    }
+    75%{
+        transform: rotate(-90deg);
+    }
+    100%{
+    }
+}
+.showcase .satelite{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 100px;
+    right: 100px;
+    animation-name: satelite;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+.showcase .satelite img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes satelite{
+    0%{
+        bottom: 100px;
+    }
+    25%{
+        bottom: 200px;
+    }
+    50%{
+        right: 200px;
+    }
+    75%{
+        bottom: 100px;
+    }
+    100%{
+        right: 100px;
+    }
+}
+
+
+.showcase .showcase-text .typed-out{ 
+    font-size: 5vmax;
+    font-weight: 600;
+}
+.showcase .showcase-text p{ 
+    font-size: 2vmax;
+    color: rgb(215, 215, 215);
+}
+.showcase .showcase-text .btn{
+    border: 1px solid #fff;
+    color: #fff;
+}
+.showcase .showcase-text .btn:hover{
+    background-color: #a974c3;
+}
+
+/* TYPEWRITER */
+
+.typed-out{
+    overflow: hidden;
+    border-right: .15em solid orange;
+    color: #fff;
+    white-space: nowrap;  
+    width: 0;
+    font-size: 3vmax; 
+    animation: typing 5s steps(30, end) forwards;
+    animation-iteration-count: 2;
+}
+
+/* phone */ 
+@media (max-width: 800px){
+    .showcase .showcase-text .typed-out{ 
+        font-size: 3vmax;
+    }
+    .showcase .showcase-text p{ 
+        font-size: 20px;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+
+.search-space{
+    background-color: rgb(224, 224, 224);
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+.search-space form{
+    margin: 20px;     
+    display: flex;
+    align-items: center;
+    }
+.search-space input{
+    border: none;
+    padding: 8px 20px;
+
+}
+.search-space input[type="submit"]{
+    background-color: rgb(99, 86, 215);
+    color: #fff;
+}
+.search-space input[type="submit"]:hover{
+    background-color: rgb(119, 109, 213);
+    color: #fff;
+}
+
+
+.add-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    border: 1px solid rgb(151, 151, 151);
+    box-shadow: 5px 10px rgb(214, 214, 214);
+}
+.add-form .add-form-item{
+    margin: 10px;
+}
+.add-form select, input{
+    width: 95%;
+    border: none;
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+.card-id{
+    transition: .5s;
+    border: none;
+}
+.card-id:hover{    
+    box-shadow: 5px 10px rgb(125, 125, 125);
+    transform: translateY(-10px);
+}
+
+.btn-back{
+    position: absolute;
+    border: 2px solid black;
+    padding: 10px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 700;
+}
+.btn-back:hover{
+    position: absolute;
+    border: 1px solid rgb(6, 6, 6);
+    background-color: rgb(74, 74, 74);
+    padding: 10px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+}
+
+/* CARD DESIGN */
+
+.bg-danger{
+    background-color: #e91643 !important;
+}
+.card-header{
+    font-weight: 600;
+    font-size: 2vmax;
+}
+.card-body .card-title{
+    font-size: 1.8vmax;
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.card-body .msg{
+    font-size: 1.5vmax;
+    font-weight: 600;
+}
+
+
+.container-msg{
+    width: 90%;
+    margin: auto;
+}
+
+
+/* PHONE SIZE */
+
+@media(max-width: 700px){
+    .showcase .rocket{
+        width: 100px;
+        height: 100px;
+        top: 100px;
+        left: 100px;
+    }
+    
+    @keyframes rocket{
+        0%{
+            top: 100px;
+            left: 50px;
+        }
+        25%{
+            transform: rotate(90deg);
+        }
+        50%{
+            left: 300px;
+        }
+        75%{
+            transform: rotate(-90deg);
+        }
+        100%{
+            top: 100px;
+            left: 50px;
+        }
+    }
+    .showcase .satelite{
+        width: 100px;
+        height: 100px;
+        bottom: 100px;
+        right: 100px;
+    }
+    
+    @keyframes satelite{
+        0%{
+            bottom: 100px;
+        }
+        25%{
+            bottom: 100px;
+        }
+        50%{
+            right: 100px;
+        }
+        75%{
+            bottom: 50px;
+        }
+        100%{
+            right: 50px;
+        }
+    }
+}
