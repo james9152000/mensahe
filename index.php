@@ -31,7 +31,7 @@ $rows = $result->fetch_assoc();
 
           <div class="home">
 
-            <a href="">Home</a>
+            <a href="">Message Wall</a>
 
           </div>
 
